@@ -1,0 +1,91 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>42926dae-9006-4c80-af49-2d6c2af7e7d0</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>BoardGames</Name>
+    <RootNamespace>BoardGames</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\core\" />
+    <Folder Include="app\models\" />
+    <Folder Include="app\utils\" />
+    <Folder Include="app\routers\" />
+    <Folder Include="app\services\" />
+    <Folder Include="app\repository\" />
+    <Folder Include="app\schemas\" />
+    <Folder Include="alembic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\core\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\core\config.py" />
+    <Compile Include="app\core\database.py" />
+    <Compile Include="app\core\exceptions.py" />
+    <Compile Include="app\models\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\boardgame.py" />
+    <Compile Include="app\repository\boardgame_repo.py" />
+    <Compile Include="app\routers\boardgames.py" />
+    <Compile Include="app\schemas\boardgame.py" />
+    <Compile Include="app\schemas\pagination.py" />
+    <Compile Include="app\services\boardgame_service.py" />
+    <Compile Include="app\utils\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\routers\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\services\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\repository\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\schemas\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\utils\pagination.py" />
+    <Compile Include="app\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\main.py" />
+    <Compile Include="alembic\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".env" />
+    <Content Include="docker-compose.yml" />
+    <Content Include="requirements.txt" />
+    <Content Include="Dockerfile" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
